@@ -1,3 +1,5 @@
+// menu nav
+
 let abrir = document.querySelector("#abir")
 let cerrar = document.querySelector("#cerrar")
 let menu = document.querySelector("#menu")
@@ -10,4 +12,7 @@ cerrar.addEventListener("click", () => {
     menu.classList.remove("visible")
 })
 
-console.log("hola")
+window.addEventListener("scroll", () => {
+    let header = document.querySelector("#header")
+    header.classList.toggle("abajo", window.scrollY>0)
+})
